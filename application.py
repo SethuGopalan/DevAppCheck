@@ -4,11 +4,11 @@ from dash import dcc,html,Dash
 
 
 
-application=Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+app=Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-server=application.server
+server=app.server
 
-application.layout=dbc.Container(
+app.layout=dbc.Container(
 
     [
         dbc.Row(
@@ -29,4 +29,4 @@ application.layout=dbc.Container(
 )
 
 if __name__ == "__main__":
-    application.run(debug=True,port=8000)
+    app.run(debug=True,port=8000)
